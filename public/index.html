@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+    <style media="screen">
+      body {
+        margin: 0;
+      }
+    </style>
+    <link rel="manifest" href="manifest.json">
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="bower_components/web-animations-js/web-animations.min.js"></script>
+    <link rel="import" href="bower_components/platinum-sw/platinum-sw-elements.html">
+    <link rel="import" href="bower_components/polymerfire/firebase-app.html">
+    <link rel="import" href="note-app.html">
+  </head>
+  <body>
+    <platinum-sw-register
+      auto-register
+      skip-waiting
+      clients-claim
+      reload-on-install
+      href="sw-import.js">
+      <platinum-sw-cache default-cache-strategy="networkFirst"></platinum-sw-cache>
+    </platinum-sw-register>
+    <firebase-app
+      name = "notes"
+      apiKey = "AIzaSyAFI3QXO5qgM9nch2BC5vXDS4EtJ9rwYYY"
+      authDomain = "efan-d53b0.firebaseapp.com"
+      databaseURL = "https://efan-d53b0.firebaseio.com">
+    </firebase-app>
+    <note-app>
+      
+    </note-app>
+  </body>
+</html>
